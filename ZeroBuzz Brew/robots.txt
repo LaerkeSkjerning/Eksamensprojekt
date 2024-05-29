@@ -1,3 +1,0 @@
-Disallow all example:
-User-agent: *
-Disallow: /
