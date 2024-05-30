@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ZeroBuzz</title>
+  <link rel="shortcut icon" href="images/Icon.webp">
+  <link rel="stylesheet" href="css/css.css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <section class="logo">
+            <a href="index.html">
+                <img src="images/Logo.webp" alt="Logo">
+            </a>
+        </section>
+        <section class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </section>
+        <nav>
+            <ul>
+                <li><a href="sortiment.html">Sortiment</a>
+                    <ul class="dropdown">
+                        <li><a href="Dåse-øl.html">Dåse Øl</a></li>
+                        <li><a href="Flaske-øl.html">Flaske øl</a></li>
+                    </ul>
+                </li>
+                <li><a href="Nyheder.html">Nyheder</a></li>
+                <li><a href="Blandingskasser.html">Blandingskasser</a>
+                    <ul class="dropdown">
+                        <li><a href="Gaver.html">Gaver</a></li>
+                        <li><a href="Bland-selv-kasse.html">Bland selv kasse</a></li>
+                        <li><a href="Blandingskasse-tilbud.html">Blandingskasse tilbud</a></li>
+                    </ul>
+                </li>
+                <li><a href="Fysisk-køb.html">Fysisk Køb</a></li>
+                <li><a href="Om-os.html">Om Os</a>
+                    <ul class="dropdown">
+                        <li><a href="Hvem-er-vi.html">Hvem er vi?</a></li>
+                        <li><a href="kontakt.html">Kontakt</a></li>
+                        <li><a href="Nyhedsbrev.html">Nyhedsbrev</a></li>
+                    </ul>
+                    <li>
+                        <a class="kurv" href="index.html">
+                          <img src="images/shopping-bag.webp" alt="kurv">
+                        </a>
+                      </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>
+            HVAD SØGER DU?
+        </h1>
+        <section class="container">
+            <article class="box">
+                <h2>DÅSE ØL</h2>
+                <section class="image-beer">
+                <img src="images/Dåse-øl/D9.webp" alt="Dåse øl">
+            </section>
+                <a href="Dåse-øl.html" class="button">Vælg</a>
+            </article>
+            
+            <article class="box">
+                <h2>FLASKE ØL</h2>
+                <section class="image-beer">
+                <img src="images/Flaskeøl-sortiment.webp" alt="Flaske øl">
+            </section>
+                <a href="Flaske-øl.html" class="button">Vælg</a>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>ZeroBuzz Brew</p>
+        <p>Thunøgade 1, 8000 Aarhus</p>
+        <p>+45 12 34 56 78</p>
+        <p><a href="mailto:zerobuzzbrew@zerobuzz.com">zerobuzzbrew@zerobuzz.com</a></p>
+    
+    </footer>
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navUl = document.querySelector('nav ul');
+    
+        mobileMenu.addEventListener('click', () => {
+            navUl.classList.toggle('showing');
+        });
+    </script>
+</body>
+
+</html>

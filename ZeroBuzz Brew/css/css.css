@@ -1,0 +1,1293 @@
+/* Grundlæggende styling */
+:root {
+  --skriftfarve: #000;
+  --primaer-beige: #D9D2C7;
+  --sekundaer-beige: #B6A08A;
+  --sekundaer-moerk-beige: #8e7d6d;  
+}
+
+body {
+  margin: 0; /* Fjern standard margin */
+  display: flex; /* Brug flexbox til layout */
+  flex-direction: column; /* Retning af flex-kolonne */
+  min-height: 100vh; /* Minimum højde på 100vh */
+  background-color: #E9E4DC;
+}
+
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+}
+
+a {
+  text-decoration: none; /* fjerner streger under links */
+  color: inherit; /* fjerner den blå farve i links */
+  font-size: 1.2rem;
+  font-weight: 650;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Header styling */
+header {
+  width: 100%; /* Fylder hele bredden */
+  background-color: var(--primaer-beige); /* Baggrundsfarve */
+  text-align: center; /* Centrer tekst */
+  padding-bottom: 1rem; /* Vertikal padding */
+  padding-top: 1.5rem; /* Vertikal padding */
+  font-family: "Anonymous Pro", monospace; /* skrifttype */
+}
+
+.logo img {
+  width: 25rem; /* Logo bredde */
+  height: auto; /* Automatisk højde */
+}
+
+.kurv img {
+  width: 1.2rem; /* Logo bredde */
+  height: 1.2rem; /* Automatisk højde */
+}
+
+nav {
+  width: 100%; /* Fylder hele bredden */
+  background-color: var(--primaer-beige); /* Baggrundsfarve */
+}
+
+nav ul {
+  list-style-type: none; /* Fjern punkttegn */
+  margin: 0; /* Fjerner margin */
+  padding: 0; /* Fjerner padding */
+  display: flex; /* Brug flexbox til navigation */
+  justify-content: center; /* Centrer navigationselementer */
+  flex-wrap: wrap; /* Tillad wrapping */
+}
+
+nav ul li {
+  position: relative; /* Relativ position til dropdown */
+}
+
+nav ul li a {
+  display: inline-block; /* Blok-element */
+  padding: 15px 20px; /* Indvendig margin */
+  text-decoration: none; /* Fjern understregning */
+  color: var(--skriftfarve); /* tekstfarve */
+  transition: background-color 0.3s; /* Glat overgang ved hover */
+}
+
+nav ul li a:hover {
+  background-color: var(--sekundaer-beige); /* Mørkere baggrundsfarve ved hover */
+  width: auto;
+}
+
+/* Dropdown-menu styling */
+nav ul li .dropdown {
+  display: none; /* Skjul dropdown som standard */
+  position: absolute; /* Absolut positionering */
+  top: 100%; /* Placer under hovedmenuen */
+  left: 0; /* Juster til venstre */
+  background-color: var(--sekundaer-beige); /* Baggrundsfarve for dropdown-menuen */
+  list-style-type: none; /* Fjern punkttegn */
+  margin: 0; /* Fjern margin */
+  padding: 0; /* Fjern padding */
+  min-width: 200px; /* Minimum bredde for dropdown-menuen */
+  z-index: 1000; /* Over andre elementer */
+  box-shadow: 0 8px 16px var(--sekundaer-beige); /* Skygge for dropdown-menuen */
+  border-radius: 4px; /* Runde hjørner for dropdown-menuen */
+}
+
+nav ul li .dropdown li a {
+  padding: 0; /* Indvendig margin */
+  text-decoration: none; /* Fjern understregning */
+  color: var(--skriftfarve); /* Hvid tekstfarve */
+  display: inline-block; /* Blok-element */
+  transition: background-color 0.3s; /* Glat overgang ved hover */
+}
+
+nav ul li .dropdown li a:hover {
+  background-color: var(--sekundaer-moerk-beige); /* Mørkere baggrundsfarve ved hover */
+}
+
+/* Vis dropdown-menuen ved hover */
+nav ul li:hover .dropdown {
+  display: block; /* Vis dropdown ved hover */
+}
+
+.billede-container-top {
+  margin: 7rem; 
+  height: auto;
+}
+
+/* ------------------------------------------------------------------------- */
+/* footer */
+
+footer {
+  background-color: var(--primaer-beige);
+  color: black;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 20px;
+  font-family: "Montserrat", sans-serif;
+}
+
+footer a {
+  color: black;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ------------------------------------------------------------------------- */
+/*Forside*/
+
+/* Stil for hovedoverskriften */
+.main-heading {
+  text-align: center;
+  font-size: 2.5rem; /* Skriftstørrelse */
+  margin-top: 2rem; /* Øvre margin */
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Stil for introduktionssektionen */
+.intro-section {
+  text-align: center;
+  margin: 2rem 0; /* Øvre og nedre margin */
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Stil for introduktionsbilledet */
+.intro-image {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Stil for introduktionsteksten */
+.intro-text {
+  font-size: 1.2rem;
+  margin-top: 1rem; /* Øvre margin */
+  margin-left: 9rem;
+  margin-right: 9rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Stil for den vandrette linje */
+.full-width-line {
+  border: none;
+  border-top: 0.1rem solid var(--sekundaer-moerk-beige);
+  margin: 2rem 0; /* Øvre og nedre margin */
+}
+
+/* Stil for overskriften for top 3 sektionen */
+.top-3-heading {
+  text-align: center;
+  font-size: 2rem; /* Skriftstørrelse */
+  margin-bottom: 2rem; /* Nedre margin */
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Stil for beholderen, der indeholder top 3 kasser */
+.top-3-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem; /* Afstand mellem kasserne */
+  padding: 0 2rem; /* Indre margin for containeren */
+}
+
+/* Stil for hver individuel top 3 kasse */
+.top-3-box {
+  border: 0.1rem solid var(--sekundaer-beige); /* Kant rundt om kassen */
+  background-color: var(--primaer-beige);
+  padding: 1rem; /* Indre margin for hver kasse */
+  text-align: center; /* Centrerer tekst og indhold */
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Stil for billederne i hver top 3 kasse */
+.product-image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1rem; /* Afstand under billedet */
+}
+
+/* Stil for overskrifterne i hver top 3 kasse */
+.product-name {
+  font-size: 1.5rem;
+  margin: 1rem 0; /* Margin over og under overskriften */
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Stil for beskrivende tekst i hver top 3 kasse */
+.product-description {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 1rem; /* Afstand under teksten */
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Stil for prisen i hver top 3 kasse */
+.product-price {
+  font-size: 1.2rem;
+  color: #000;
+  text-align: left; /* Venstrejusterer prisen */
+  margin-bottom: 1rem; /* Afstand under prisen */
+}
+
+/* Stil for knappen i hver top 3 kasse */
+.buy-button {
+  display: inline-block;
+  padding: 0.5rem 1rem; /* Polstring for knappen */
+  background-color: var(--sekundaer-beige);
+  color: #000;
+  text-decoration: none;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Glidende overgang for baggrundsfarve */
+}
+
+/* Hover-effekt for knappen */
+.buy-button:hover {
+  background-color: var(--sekundaer-moerk-beige);
+}
+
+
+
+/* ------------------------------------------------------------------------- */
+/* sortiment */
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.box {
+  width: 45%; /* bredden */
+  margin: 1rem;
+  border: 1px solid var(--sekundaer-beige); /* kant og farve på kant */
+  padding: 2rem; /* mellemrum mellem kant og billede/indhold af boxen */
+  text-align: center; /* overskriften i midten */
+  background-color: var(--primaer-beige); /* baggrund på boksen */
+  font-family: "Montserrat", sans-serif; /* skrifttype*/
+}
+
+.box img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+  font-family: "Montserrat", sans-serif; /* skrifttype*/
+}
+
+h2 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 0rem;
+  margin-bottom: 2rem;
+  font-family: "Montserrat", sans-serif; /* skrifttype*/
+}
+
+.image-beer {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.image-beer img {
+  width: 100%;
+  height: auto;
+}
+
+/* ------------------------------------------------------------------------- */
+/* Dåseøl */
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.product-item {
+  border: 1px solid var(--sekundaer-beige);
+  padding: 20px;
+  text-align: center;
+  background-color: var(--primaer-beige); /* baggrund på boksen */
+  font-family: "Montserrat", sans-serif; /* skrifttype*/
+}
+
+.product-item img {
+  max-width: 100%;
+  height: auto;
+}
+
+.product-item h2 {
+  font-size: 1.2em;
+  margin: 10px 0;
+  font-family: "Montserrat", sans-serif; /* skrifttype*/
+}
+
+.price {
+  font-size: 1em;
+  color: #333;
+  text-align: left;
+  margin-bottom: 10px;
+  font-family: "Montserrat", sans-serif; /* skrifttype*/
+}
+
+.cart-button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: var(--sekundaer-beige);
+  color: #000;
+  text-decoration: none;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: "Montserrat", sans-serif; /* skrifttype*/
+}
+
+.cart-button:hover {
+  background-color: var(--sekundaer-moerk-beige);
+}
+
+
+/* ------------------------------------------------------------------------- */
+/* Nyheder */
+
+.news-article {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif; /* skrifttype*/
+}
+
+.news-article img {
+  max-width: 100%;
+  height: auto;
+}
+
+.news-article h1 {
+  font-size: 2em;
+  margin: 20px 0;
+  font-family: "Montserrat", sans-serif; /* skrifttype*/
+}
+
+.news-article p {
+  font-size: 1em;
+  color: #333;
+  margin: 20px 0;
+  text-align: center;
+  font-family: "Montserrat", sans-serif; /* skrifttype*/
+}
+
+/* ------------------------------------------------------------------------- */
+/* Blandings kasser */
+
+/* Stilarter for beholderen, der indeholder de tre bokse */
+.mix-box-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Stilarter for hver enkelt boks */
+.mix-box {
+  width: 30%;
+  border: 1px solid var(--sekundaer-beige);
+  background-color: var(--primaer-beige);
+  padding: 20px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif; /* skrifttype*/
+}
+
+/* Stilarter for billederne i hver boks */
+.mix-box img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+/* Stilarter for underoverskrifterne i hver boks */
+.mix-box h2 {
+  font-size: 1.5em;
+  margin: 10px 0;
+  font-family: "Montserrat", sans-serif; /* skrifttype*/
+}
+
+/* Stilarter for tekstbeskrivelsen i hver boks */
+.mix-box p {
+  font-size: 1em;
+  color: #333;
+  margin-bottom: 20px;
+  font-family: "Montserrat", sans-serif; /* skrifttype*/
+}
+
+/* Stilarter for knappen i hver boks */
+.mix-button {
+  display: inline-block;
+  padding: 0.5rem 1rem; /* Polstring for knappen */
+  background-color: var(--sekundaer-beige);
+  color: #000;
+  text-decoration: none;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Glidende overgang for baggrundsfarve */
+  font-family: "Montserrat", sans-serif; /* skrifttype*/
+}
+
+/* Hover-effekt for knappen */
+.mix-button:hover {
+  background-color: var(--sekundaer-moerk-beige);
+}
+
+/* ------------------------------------------------------------------------- */
+/* Blandings kasser - bland selv */
+
+/* Stil for indkøbskurv sektionen */
+.cart-section {
+  width: 23rem; /* Bredde */
+  padding: 2rem; /* Indre margin */
+  background-color: #fff; /* Baggrundsfarve */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); /* Skjuler for at give dybde */
+  margin: 2rem; /* Ydre margin */
+  margin-left: 31.4rem;
+}
+
+/* Stil for indkøbskurv overskriften */
+.cart-heading {
+  font-size: 2rem; /* Skriftstørrelse */
+  margin-bottom: 1rem; /* Nedre margin */
+  font-family: "Montserrat", sans-serif; /* skrifttype*/
+}
+
+/* Stil for liste over indkøbskurv elementer */
+.cart-items {
+  list-style: none; /* Fjerner punkttegn */
+  padding: 0; /* Ingen indre margin */
+  margin: 0 0 2rem 0; /* Margin top/bund */
+}
+
+/* Stil for hvert indkøbskurv element */
+.cart-item {
+  display: flex; /* Flexbox layout */
+  justify-content: space-between; /* Placerer elementer på hver side */
+  margin-bottom: 1rem; /* Nedre margin */
+}
+
+/* Stil for totalbeløbet i indkøbskurven */
+.cart-total {
+  font-size: 1.5rem; /* Skriftstørrelse */
+  text-align: center; /* Centrerer teksten */
+  font-family: "Montserrat", sans-serif; /* skrifttype*/
+}
+
+/* Stil for mix-yourself gitter sektionen */
+.mix-yourself-grid {
+  display: grid; /* Grid layout */
+  grid-template-columns: repeat(3, 1fr); /* 3 kolonner */
+  gap: 2rem; /* Mellemrum mellem grid elementer */
+  padding: 2rem; /* Indre margin */
+  flex: 1; /* Fylder resterende plads */
+}
+
+/* Stil for hver mix-yourself kasse */
+.mix-yourself-box {
+  background-color: var(--primaer-beige); /* Baggrundsfarve */
+  padding: 1rem; /* Indre margin */
+  text-align: center; /* Centrerer teksten */
+  border: 1px solid var(--sekundaer-beige); /* kant om boxen */
+  font-family: "Montserrat", sans-serif; /* skrifttype*/
+}
+
+/* Stil for mix-yourself flaske */
+.mix-yourself-image {
+  max-width: 100%; /* Fylder maks bredde af containeren */
+  height: auto; /* Bevarer proportionerne */
+}
+
+/* Stil for mix-yourself dåse */
+.mix-yourself-image-D {
+  max-width: 66%; /* Fylder maks bredde af containeren */
+  height: auto; /* Bevarer proportionerne */
+}
+
+/* Stil for mix-yourself navnene */
+.mix-yourself-name {
+  font-size: 1.5rem; /* Skriftstørrelse */
+  margin: 1rem 0; /* Margin top/bund */
+  font-family: "Montserrat", sans-serif; /* skrifttype*/
+}
+
+/* Stil for mix-yourself priserne */
+.mix-yourself-price {
+  font-size: 1.2rem; /* Skriftstørrelse */
+  text-align: left; /* Venstrejusterer teksten */
+  font-family: "Montserrat", sans-serif; /* skrifttype*/
+}
+
+/* Stil for knappen til at lægge i kurven */
+.add-to-cart-btn {
+  display: inline-block;
+  padding: 0.5rem 1rem; /* Indre margin top/bund: 0.5rem, venstre/højre: 1rem */
+  font-size: 1rem; /* Skriftstørrelse */
+  background-color: var(--sekundaer-beige); /* Blå baggrundsfarve */
+  color: #000; /* Hvid tekstfarve */
+  border: none; /* Ingen kant */
+  border-radius: 0.3rem;
+  cursor: pointer; /* Skifter cursor til peger */
+  margin-top: 1rem; /* Øvre margin */
+  transition: background-color 0.3s ease; /* Glidende overgang for baggrundsfarve */
+  font-family: "Montserrat", sans-serif; /* skrifttype*/
+}
+
+/* Hover-effekt for knappen */
+.add-to-cart-btn:hover {
+  background-color: var(--sekundaer-moerk-beige); /* Mørkere blå farve ved hover */
+}
+
+/* ------------------------------------------------------------------------- */
+/* Blandings kasser - tilbud og gave æsker*/
+
+/* Stilarter for beholderen, der indeholder alle blandingskasser */
+.blanding-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem; /* Afstand mellem boksene */
+  padding: 2rem; /* Indre margin for containeren */
+}
+
+/* Stilarter for hver individuel blandingskasse */
+.blanding-box {
+  border: 0.1rem solid var(--sekundaer-beige); /* Kant rundt om boksen */
+  background-color: var(--primaer-beige);
+  padding: 1rem; /* Indre margin for hver boks */
+  text-align: center; /* Centrerer tekst og indhold */
+  font-family: "Montserrat", sans-serif; /* skrifttype*/
+}
+
+/* Stilarter for billederne i hver blandingskasse */
+.blanding-box img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1rem; /* Afstand under billedet */
+}
+
+/* Stilarter for overskrifterne i hver blandingskasse */
+.blanding-box h2 {
+  font-size: 1.5rem;
+  margin: 1rem 0; /* Margin over og under overskriften */
+  font-family: "Montserrat", sans-serif; /* skrifttype*/
+}
+
+/* Stilarter for beskrivende tekst i hver blandingskasse */
+.blanding-box .description {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 1rem; /* Afstand under teksten */
+  font-family: "Montserrat", sans-serif; /* skrifttype*/
+}
+
+/* Stilarter for prisen i hver blandingskasse */
+.blanding-box .price {
+  font-size: 1.2rem;
+  color: #000;
+  text-align: left; /* Venstrejusterer prisen */
+  margin-bottom: 1rem; /* Afstand under prisen */
+  font-family: "Montserrat", sans-serif; /* skrifttype*/
+}
+
+/* Stilarter for knappen i hver blandingskasse */
+.blanding-box .buy-button {
+  display: inline-block;
+  padding: 10px 20px;/* Polstring for knappen */
+  background-color: var(--sekundaer-beige);
+  color: #000;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Polstring for knappen */
+  font-family: "Montserrat", sans-serif; /* skrifttype*/
+}
+
+/* Hover-effekt for knappen */
+.blanding-box .buy-button:hover {
+  background-color: var(--sekundaer-moerk-beige);
+}
+
+
+/* ------------------------------------------------------------------------- */
+/* fysisk køb */
+
+.container-fysisk {
+  display: flex;
+  justify-content: space-between;
+}
+
+.box-fysisk {
+  width: 45%; /* bredden */
+  margin: 1rem;
+  border: 1px solid var(--sekundaer-beige); /* kant og farve på kant */
+  padding: 2rem; /* mellemrum mellem kant og billede/indhold af boxen */
+  text-align: center; /* overskriften i midten */
+  background-color: var(--primaer-beige); /* baggrund på boksen */
+  font-family: "Montserrat", sans-serif; /* skrifttype*/
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  margin-bottom: 2rem;
+}
+
+.image-grid img {
+  width: 100%;
+  height: auto;
+}
+
+/* ------------------------------------------------------------------------- */
+/* Om os */
+
+/* Stil for beholderen, der indeholder alle bokse */
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem; /* Afstand mellem bokse */
+  padding: 2rem; /* Indre margin for containeren */
+}
+
+/* Stil for hver individuel boks */
+.about-box {
+  position: relative; /* Positionering af teksten oven på billedet */
+  overflow: hidden; /* Skjuler overskydende indhold */
+  border: 0.1rem solid var(--sekundaer-beige); /* Kant rundt om boksen */
+  background-color: #fff;
+}
+
+/* Stil for billederne i hver boks */
+.about-image {
+  width: 100%; /* Billedet fylder hele boksens bredde */
+  height: auto; /* Bevarer billedets proportioner */
+}
+
+/* Stil for teksten oven på billederne */
+.about-text {
+  position: absolute; /* Absolut positionering inden for boksen */
+  top: 50%; /* Justering til midten lodret */
+  left: 50%; /* Justering til midten vandret */
+  transform: translate(-50%, -50%); /* Centrerer teksten */
+  background-color: rgba(0, 0, 0, 0.5); /* Halvgennemsigtig baggrund */
+  color: #fff; /* Hvid tekstfarve for kontrast */
+  padding: 1rem; /* Indre margin for tekstboksen */
+  text-align: center; /* Centrerer teksten */
+  font-family: "Montserrat", sans-serif; /* skrifttype*/
+}
+
+/* Stil for overskrifterne inden for teksten */
+.about-text h2 {
+  margin: 0 0 0.5rem 0; /* Margin under overskriften */
+  font-size: 1.2rem; /* Skriftstørrelse */
+  font-family: "Montserrat", sans-serif; /* skrifttype*/
+}
+
+/* Stil for tekstparagrafferne inden for teksten */
+.about-text p {
+  margin: 0; /* Ingen margin */
+  font-size: 1rem; /* Skriftstørrelse */
+  font-family: "Montserrat", sans-serif; /* skrifttype*/
+}
+
+
+/* ------------------------------------------------------------------------- */
+/* Om os - kontakt */
+
+
+/* Stil for hovedoverskriften */
+.contact-heading {
+  text-align: center; /* Centrerer teksten */
+  font-size: 2.5rem; /* Skriftstørrelse */
+  margin-top: 2rem; /* Øvre margin */
+  font-family: "Montserrat", sans-serif; /* skrifttype*/
+}
+
+/* Container der indeholder både kontaktinformationer og billedet */
+.contact-container {
+  display: flex; /* Flexbox layout til side-om-side layout */
+  justify-content: space-between; /* Placerer elementer på hver side af containeren */
+  padding: 3rem 10rem; /* Indre margin: 3rem top/bund, 10rem venstre/højre */
+}
+
+/* Stil for kontaktinformationssektionen */
+.contact-info {
+  flex: 1; /* Får denne sektion til at fylde ligeligt */
+  padding-right: 2rem; /* Højre margin til afstand fra billedet */
+}
+
+/* Stil for underoverskriften i kontaktinformationssektionen */
+.contact-info h2 {
+  font-size: 2rem; /* Skriftstørrelse */
+  margin-bottom: 1rem; /* Nedre margin */
+  font-family: "Montserrat", sans-serif; /* skrifttype*/
+}
+
+/* Stil for tekstparagrafferne i kontaktinformationssektionen */
+.contact-info p {
+  font-size: 1.2rem; /* Skriftstørrelse */
+  margin: 0.5rem 0; /* Øvre/nedre margin */
+  font-family: "Montserrat", sans-serif; /* skrifttype*/
+}
+
+/* Stil for link i kontaktinformationssektionen */
+.contact-info a {
+  color: var(--sekundaer-moerk-beige); /* Blå tekstfarve */
+  text-decoration: none; /* Fjerner understregning */
+  transition: color 0.3s ease; /* Glidende overgang for farve */
+  font-family: "Montserrat", sans-serif; /* skrifttype*/
+}
+
+/* Hover-effekt for linket */
+.contact-info a:hover {
+  color: #000; /* Mørkere blå farve ved hover */
+}
+
+/* Stil for billedsektionen */
+.contact-image-container {
+  flex: 1; /* Får denne sektion til at fylde ligeligt */
+  display: flex; /* Flexbox layout for centring */
+  align-items: center; /* Centrerer lodret */
+  justify-content: center; /* Centrerer vandret */
+}
+
+/* Stil for billedet */
+.contact-image {
+  max-width: 100%; /* Billedet fylder maks bredde af containeren */
+  height: auto; /* Bevarer billedets proportioner */
+}
+
+/* ------------------------------------------------------------------------- */
+/* Nyhedsbrev */
+
+.signup-text{
+  text-align: center;
+  margin-left: 20rem;
+  margin-right: 20rem;
+  font-family: "Montserrat", sans-serif; /* skrifttype*/
+}
+
+.signup-box {
+  width: 70%; /* Juster bredden efter behov */
+  max-width: 400px; /* Maximal bredde for at forhindre, at boksen bliver for bred på større skærme */
+  margin: 20px auto; /* Centrerer boksen vandret og giver 20px margin øverst og nederst */
+  padding: 20px 70px; /* 20px øverst og nederst, 70px i hver side */
+  background-color: #fff; /* Baggrundsfarven for boksen */
+  border: 2px solid var(--sekundaer-beige); /* Ramme omkring boksen */
+  border-radius: 10px; /* Afrundede hjørner */
+  text-align: center;
+  font-family: "Montserrat", sans-serif; /* skrifttype*/
+}
+
+.signup-box h2 {
+  color: var(--skriftfarve); /* Farven på overskriften */
+  font-family: "Montserrat", sans-serif; /* skrifttype*/
+}
+
+.signup-box p {
+  color: var(--skriftfarve); /* Farven på brødteksten */
+  font-family: "Montserrat", sans-serif; /* skrifttype*/
+}
+
+/* knap */
+.signup-box .button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--sekundaer-beige);
+  color: #000;
+  text-decoration: none;
+  border-radius: 5px;
+  font-family: "Montserrat", sans-serif; /* skrifttype*/
+}
+
+.signup-box .button:hover {
+  background-color: var(--sekundaer-moerk-beige);
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--sekundaer-beige);
+  color: #000;
+  text-decoration: none;
+  border-radius: 5px;
+  font-family: "Montserrat", sans-serif; /* skrifttype*/
+}
+
+.button:hover {
+  background-color: var(--sekundaer-moerk-beige);
+}
+
+/* ------------------------------------------------------------------------- */
+/* Hvem er vi? */
+
+/* Stil for det aflange billede i toppen */
+.top-image {
+  width: 100%; /* Billedet fylder hele bredden */
+  height: auto; /* Bevarer proportionerne */
+}
+
+/* Stil for hovedoverskriften */
+.main-heading {
+  text-align: center; /* Centrerer teksten */
+  font-size: 2.5rem; /* Skriftstørrelse */
+  margin-top: 3rem; /* Øvre margin */
+  font-family: "Montserrat", sans-serif; /* skrifttype*/
+}
+
+/* Stil for hovedteksten */
+.main-text {
+  text-align: center; /* Centrerer teksten */
+  font-size: 1.2rem; /* Skriftstørrelse */
+  margin: 2rem 5rem; /* Margin top/bund: 2rem, venstre/højre: 5rem */
+  font-family: "Montserrat", sans-serif; /* skrifttype*/
+}
+
+/* Stil for vandrette streger */
+.horizontal-line {
+  border: 0; /* Ingen standardkant */
+  height: 0.1rem; /* Højde på stregen */
+  background-color: #ccc; /* Farve på stregen */
+  margin: 2rem 0; /* Margin top/bund */
+}
+
+/* Stil for sektionsoverskrifter */
+.section-heading {
+  font-size: 2rem; /* Skriftstørrelse */
+  margin: 2rem 0; /* Margin top/bund */
+  text-align: center; /* Centrerer teksten */
+  font-family: "Montserrat", sans-serif; /* skrifttype*/
+}
+
+/* Container til tekst og billede i "Mission og Vision" sektionen */
+.container-mission-vision {
+  display: flex; /* Flexbox layout til side-om-side layout */
+  justify-content: space-between; /* Placerer elementer på hver side af containeren */
+  margin: 0 5rem; /* Margin venstre/højre */
+  align-items: center; /* Justerer elementer lodret i midten */
+}
+
+/* Stil for tekst til venstre */
+.text-left {
+  flex: 1; /* Får denne sektion til at fylde ligeligt */
+  font-size: 1.2rem; /* Skriftstørrelse */
+  margin-right: 2rem; /* Højre margin for afstand fra billedet */
+  font-family: "Montserrat", sans-serif; /* skrifttype*/
+}
+
+/* Stil for billedet til højre */
+.image-right {
+  flex: 1; /* Får denne sektion til at fylde ligeligt */
+  max-width: 100%; /* Billedet fylder maks bredde af containeren */
+  height: auto; /* Bevarer billedets proportioner */
+}
+
+/* Container til billede og tekst i "Fremtiden" sektionen */
+.container-more-info {
+  display: flex; /* Flexbox layout til side-om-side layout */
+  justify-content: space-between; /* Placerer elementer på hver side af containeren */
+  margin: 0 5rem; /* Margin venstre/højre */
+  align-items: center; /* Justerer elementer lodret i midten */
+}
+
+/* Stil for billedet til venstre */
+.image-left {
+  flex: 1; /* Får denne sektion til at fylde ligeligt */
+  max-width: 100%; /* Billedet fylder maks bredde af containeren */
+  height: auto; /* Bevarer billedets proportioner */
+  margin-right: 2rem; /* Højre margin for afstand fra teksten */
+}
+
+/* Stil for tekst til højre */
+.text-right {
+  flex: 1; /* Får denne sektion til at fylde ligeligt */
+  font-size: 1.2rem; /* Skriftstørrelse */
+  font-family: "Montserrat", sans-serif; /* skrifttype*/
+}
+
+/*-------------------------------------------------------------------*/
+/* Responsiv styling med media queries */
+
+/* Mobile styles */
+
+/* Header og nav bar */
+@media (max-width: 768px) {
+  header {
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .logo img {
+    width: 15rem;
+  }
+
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    margin-left: auto;
+    padding: 0 20px;
+  }
+
+  .bar {
+    height: 3px;
+    width: 25px;
+    background-color: var(--sekundaer-moerk-beige);
+    margin: 4px 0;
+    transition: 0.4s;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+  }
+
+  nav ul.showing {
+    display: flex;
+  }
+
+  nav ul li {
+    width: 100%;
+    text-align: center;
+  }
+
+  nav ul li a {
+    padding: 10px 15px;
+  }
+
+  /*Forside*/
+  
+
+  .intro-text {
+    margin: 1rem;
+    font-size: 1rem;
+    display: none;
+  }
+
+  .top-3-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+
+  .top-3-box {
+    margin-bottom: 1rem;
+  }
+
+  .product-image {
+    margin-bottom: 0.5rem;
+  }
+
+  .product-name {
+    font-size: 1.2rem;
+  }
+
+  .product-description {
+    font-size: 0.9rem;
+  }
+
+  .product-price {
+    font-size: 1rem;
+  }
+
+  .buy-button {
+    padding: 0.4rem 0.8rem;
+  }
+  /*footer*/
+  footer {
+    padding: 10px 0;
+  }
+
+  /*Dåse øl og flaske*/
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr); /* To kolonner på tablet */
+  }
+
+  /*Blandingskasser*/
+  .mix-box-container {
+    flex-wrap: wrap; /* Wrap bokse til flere rækker */
+  }
+  .mix-box {
+    width: 100%; /* En boks pr. række på mobil */
+    margin-bottom: 20px; /* Lidt afstand mellem bokse */
+  }
+
+  .mix-yourself-grid,
+  .blanding-grid {
+    grid-template-columns: repeat(1, 1fr); /* 1 kolonne på mobil */
+  }
+
+  .cart-section {
+    width: auto; /* Ændrer bredden til at være automatisk */
+    margin: 2rem; /* Ydre margin tilpasses */
+    padding: 1rem; /* Tilpasning af indre margin */
+  }
+
+
+  /*Fysisk køb*/
+  .container-fysisk {
+    flex-direction: column; /* Ændrer layoutet til lodret retning */
+  }
+  
+  .box-fysisk {
+    width: auto; /* Gør bredden auto for at fylde hele skærmen */
+  }
+
+  /* om os */
+  .about-grid {
+    grid-template-columns: repeat(1, 1fr); /* Ændrer antallet af kolonner til 1 */
+  }
+
+  .contact-container {
+    flex-direction: column; /* Ændrer layout til enkelt kolonne */
+    padding: 3rem; /* Justerer polstring */
+  }
+
+  .contact-info,
+  .contact-image-container {
+    margin-bottom: 2rem; /* Tilføjer afstand mellem sektioner */
+    padding: 0; /* Fjerner højre polstring */
+  }
+
+  .contact-info {
+    text-align: center; /* Centrerer teksten */
+  }
+
+  .signup-box {
+    width: 70%; /* Juster bredden af boksen */
+    max-width: 300px; /* Maksimal bredde for mindre skærme */
+  }
+
+  .signup-text {
+    margin-left: 1rem; /* Juster venstre margen */
+    margin-right: 1rem; /* Juster højre margen */
+  }
+
+    /* Justering af hovedoverskriften */
+    .main-heading {
+      font-size: 2rem; /* Juster skriftstørrelse */
+      margin-top: 2rem; /* Juster øvre margin */
+    }
+  
+    /* Justering af hovedteksten */
+    .main-text {
+      font-size: 1rem; /* Juster skriftstørrelse */
+      margin: 1rem; /* Juster margin */
+    }
+  
+    /* Justering af containeren til tekst og billede i "Mission og Vision" sektionen */
+    .container-mission-vision {
+      flex-direction: column; /* Ændrer layout til stakket (ovenpå hinanden) */
+      align-items: center; /* Centrerer elementer lodret */
+      margin: 1rem; /* Juster margin */
+    }
+  
+    /* Justering af containeren til billede og tekst i "Fremtiden" sektionen */
+    .container-more-info {
+      flex-direction: column-reverse; /* Ændrer layout til stakket og bytter rækkefølge */
+      align-items: center; /* Centrerer elementer lodret */
+      margin: 1rem; /* Juster margin */
+    }
+  
+    /* Justering af tekst til venstre */
+    .text-left,
+    .text-right {
+      margin: 1rem; /* Juster margin */
+      text-align: center; /* Centrerer teksten */
+    }
+  
+    /* Justering af billedet */
+    .image-left,
+    .image-right {
+      max-width: 100%; /* Billedet fylder maks bredde */
+      height: auto; /* Bevarer billedets proportioner */
+      margin-bottom: 1rem; /* Juster margin */
+    }
+}
+
+
+/* Tablet styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .intro-text {
+    margin: 1rem 2rem;
+    font-size: 1.1rem;
+  }
+
+  .top-3-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .product-name {
+    font-size: 1.3rem;
+  }
+
+  .product-description {
+    font-size: 1rem;
+  }
+
+  .product-price {
+    font-size: 1.1rem;
+  }
+
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    margin-left: auto;
+    padding: 0 20px;
+  }
+
+  .bar {
+    height: 3px;
+    width: 25px;
+    background-color: #333;
+    margin: 4px 0;
+    transition: 0.4s;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+  }
+
+  nav ul.showing {
+    display: flex;
+  }
+
+  nav ul li {
+    width: 100%;
+    text-align: center;
+  }
+
+  nav ul li a {
+    padding: 10px 15px;
+  }
+
+  /* dåse og flaske øl*/
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr); /* To kolonner på tablet */
+  }
+
+  /* blandingskasser */
+  .mix-box-container {
+    flex-wrap: wrap; /* Wrap bokse til flere rækker */
+  }
+  .mix-box {
+    grid-template-columns: repeat(3, 1fr); /* To kolonner på tablet */
+  }
+
+  .blanding-box {
+    width: 100%; /* En boks pr. række på mobil */
+    gap: 1rem; /* Mindre afstand mellem kasserne på tablet */
+  }
+
+  .cart-section {
+    width: auto; /* Ændrer bredden til at være automatisk */
+    margin: 2rem; /* Ydre margin tilpasses */
+    padding: 1rem; /* Tilpasning af indre margin */
+  }
+
+  /* fysisk køb */
+  .container-fysisk {
+    flex-direction: column; /* Ændrer layoutet til lodret retning */
+  }
+  
+  .box-fysisk {
+    width: auto; /* Gør bredden auto for at fylde hele skærmen */
+  }
+
+  /* om os */
+  .about-grid {
+    grid-template-columns: repeat(2, 1fr); /* Ændrer antallet af kolonner til 2 */
+  }
+
+  .contact-container {
+    flex-direction: column; /* Ændrer layout til enkelt kolonne */
+    padding: 3rem; /* Justerer polstring */
+  }
+
+  .contact-info,
+  .contact-image-container {
+    margin-bottom: 2rem; /* Tilføjer afstand mellem sektioner */
+    padding: 0; /* Fjerner højre polstring */
+  }
+
+  .contact-info {
+    text-align: center; /* Centrerer teksten */
+  }
+
+  .signup-box {
+    width: 70%; /* Juster bredden af boksen */
+    max-width: 300px; /* Maksimal bredde for mindre skærme */
+  }
+
+  .signup-text {
+    margin-left: 1rem; /* Juster venstre margen */
+    margin-right: 1rem; /* Juster højre margen */
+  }
+
+
+    /* Justering af hovedoverskriften */
+    .main-heading {
+      font-size: 2rem; /* Juster skriftstørrelse */
+      margin-top: 2rem; /* Juster øvre margin */
+    }
+  
+    /* Justering af hovedteksten */
+    .main-text {
+      font-size: 1rem; /* Juster skriftstørrelse */
+      margin: 1rem; /* Juster margin */
+    }
+  
+    /* Justering af containeren til tekst og billede i "Mission og Vision" sektionen */
+    .container-mission-vision {
+      flex-direction: column; /* Ændrer layout til stakket (ovenpå hinanden) */
+      align-items: center; /* Centrerer elementer lodret */
+      margin: 1rem; /* Juster margin */
+    }
+  
+    /* Justering af containeren til billede og tekst i "Fremtiden" sektionen */
+    .container-more-info {
+      flex-direction: column-reverse; /* Ændrer layout til stakket og bytter rækkefølge */
+      align-items: center; /* Centrerer elementer lodret */
+      margin: 1rem; /* Juster margin */
+    }
+  
+    /* Justering af tekst til venstre */
+    .text-left,
+    .text-right {
+      margin: 1rem; /* Juster margin */
+      text-align: center; /* Centrerer teksten */
+    }
+  
+    /* Justering af billedet */
+    .image-left,
+    .image-right {
+      max-width: 100%; /* Billedet fylder maks bredde */
+      height: auto; /* Bevarer billedets proportioner */
+      margin-bottom: 1rem; /* Juster margin */
+    }
+}

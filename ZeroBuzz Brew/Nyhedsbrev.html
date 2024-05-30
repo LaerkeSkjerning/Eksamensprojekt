@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZeroBuzz</title>
+    <link rel="shortcut icon" href="images/Icon.webp">
+    <link rel="stylesheet" href="css/css.css"> 
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <section class="logo">
+            <a href="index.html">
+                <img src="images/Logo.webp" alt="Logo">
+            </a>
+        </section>
+        <section class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </section>
+        <nav>
+            <ul>
+                <li><a href="sortiment.html">Sortiment</a>
+                    <ul class="dropdown">
+                        <li><a href="Dåse-øl.html">Dåse Øl</a></li>
+                        <li><a href="Flaske-øl.html">Flaske øl</a></li>
+                    </ul>
+                </li>
+                <li><a href="Nyheder.html">Nyheder</a></li>
+                <li><a href="Blandingskasser.html">Blandingskasser</a>
+                    <ul class="dropdown">
+                        <li><a href="Gaver.html">Gaver</a></li>
+                        <li><a href="Bland-selv-kasse.html">Bland selv kasse</a></li>
+                        <li><a href="Blandingskasse-tilbud.html">Blandingskasse tilbud</a></li>
+                    </ul>
+                </li>
+                <li><a href="Fysisk-køb.html">Fysisk Køb</a></li>
+                <li><a href="Om-os.html">Om Os</a>
+                    <ul class="dropdown">
+                        <li><a href="Hvem-er-vi.html">Hvem er vi?</a></li>
+                        <li><a href="kontakt.html">Kontakt</a></li>
+                        <li><a href="Nyhedsbrev.html">Nyhedsbrev</a></li>
+                    </ul>
+                    <li>
+                        <a class="kurv" href="index.html">
+                          <img src="images/shopping-bag.webp" alt="kurv">
+                        </a>
+                      </li>
+            </ul>
+        </nav>
+    </header>
+
+<section>
+<h1>Tilmeld dig vores nyhedsbrev</h1>
+<p class="signup-text">Tilmeld dig ZeroBuzz-nyhedsbrevet for en verden af alkoholfri øloplevelser! 
+    Få først besked om nye øl, dyk ned i spændende historier, få livsstilsråd, opskrifter 
+    og bliv en del af vores ølentusiastfællesskab.</p> 
+<p class="signup-text">Oplev øl uden grænser - tilmeld dig i dag!</p>
+</section>
+
+<section class="signup-box">
+            <label for="fname">Fornavn:</label>
+            <input type="text" id="fname" name="fname" value="Skriv dit navn her"><br><br>
+            <label for="lname">Efternavn:</label>
+            <input type="text" id="lname" name="lname" value="Skriv dit efternavn her"><br><br>
+
+            <label for="myfile">Indsæt billede her:</label>
+            <input type="file" id="myfile" name="myfile"><br><br>
+
+            <label for="adresse">Adresse:</label>
+            <input type="text" id="adresse" name="adresse" value="Skriv din adresse her"><br><br>
+            <label for="fodselsdag">Fødseldag:</label>
+            <input type="date" id="fodselsdag" name="Fodselsdag" min="2006-06-06"><br><br>
+            <label for="Email">E-mail:</label>
+            <input type="text" id="Email" name="Email" value="Skriv din E-mail her"><br><br>
+            <label for="Tlf">Telefon nummer:</label>
+            <input type="text" id="Tlf" name="Tlf" value="Skriv dit tlf nr. her"><br><br>
+            <label for="username">Brugernavn:</label>
+            <input type="text" id="username" name="username" value="Vælg brugernavn"><br><br>
+            <label for="pwd">Adgangskode:</label>
+            <input type="password" id="pwd" name="pwd" value="*******"><br><br>
+
+            <a href="tilmeldingside-svar.html" class="button">Subscribe</a>
+</section>
+<footer>
+    <p>ZeroBuzz Brew</p>
+    <p>Thunøgade 1, 8000 Aarhus</p>
+    <p>+45 12 34 56 78</p>
+    <p><a href="mailto:zerobuzzbrew@zerobuzz.com">zerobuzzbrew@zerobuzz.com</a></p>
+
+</footer>
+<script>
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navUl = document.querySelector('nav ul');
+
+    mobileMenu.addEventListener('click', () => {
+        navUl.classList.toggle('showing');
+    });
+</script>
+</body>
+
+</html>
